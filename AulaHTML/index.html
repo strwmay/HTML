@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maysa</title>
+
+    <style>
+      body {
+        background: #686868;
+        color: #c8c8c8;
+        font-family: Arial, "Helvetica", sans-serif;
+        font-size: larger;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><ins> ᯓ★ Boas Vindas! /ᐠ - ˕ -マ </ins></h1>
+    <h5>⊹ ࣪ ˖informe seu nome clicando no botão abaixo˖  ࣪ ⊹</h5>
+    <p style="text-align: center">
+      <button onclick="alerta()" style="background-color: #c8c8c8">
+        clique aqui
+      </button>
+    </p>
+
+    <p>
+         ꒦ ꒷ ꒦ ꒷ ꒦ ꒷ ꒦ ꒷ ⚝ ꒷ ꒦ ꒷ ꒦ ꒷ ꒦ ꒷ ꒦
+    </p>
+
+    <h5>˖  ࣪ ⊹escolha o tema do site nos botões abaixo⊹ ࣪ ˖</h5>
+    <p style="text-align: center">
+      <button onclick="cor1()" style="background: #989898">Claro</button>
+      <button onclick="cor2()" style="background: #686868">Normal</button>
+      <button onclick="cor3()" style="background: #383838">Escuro</button>
+    </p>
+  </body>
+  <script>
+    console.log(`Olá Mundo`);
+
+    function alerta() {
+      var nome = prompt("Informe o seu nome:");
+      alert(`Olá ${nome}`);
+    }
+
+    function cor1() {
+      document.getElementsByTagName("body")[0].style.background = "#989898";
+    }
+    function cor2() {
+      document.getElementsByTagName("body")[0].style.background = "#686868";
+    }
+    function cor3() {
+      document.getElementsByTagName("body")[0].style.background = "#383838";
+    }
+  </script>
+</html>
