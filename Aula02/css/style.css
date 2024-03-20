@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Hedvig+Letters+Sans&display=swap");
+
+body {
+  background: #989898;
+  /* url(../img/automne-e-hiver.jpg) repeat-y top/cover; */
+  color: #c7c9c9;
+  font-family: Arial, "Helvetica", sans-serif;
+  margin-top: 0;
+  padding: 10px;
+  font-family: "Hedvig Letters Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+    color: #676666;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #c7c9c9;
+}
+
+.textoCentro {
+  text-align: center;
+}
+
+h2 a {
+  background-color: #7f8080;
+  padding: 5px;
+  border-radius: 5px 20px;
+  box-shadow: -2px 2px 0px #c7c9c9;
+}
+
+h2.textoCentro {
+  margin-top: 0;
+  padding: 10px;
+}
+
+h2 a:hover {
+    background: #989898;
+}
+
+.fundoLink {
+  background: #7f8080;
+}
+
+h4{
+    color: #6e6e6e;
+    background-color: #c7c9c9;
+    text-align: center;
+    margin-top: 20px;
+}
