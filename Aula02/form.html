@@ -19,11 +19,11 @@
       >
     </h3>
 
-    <form class="textoCentro" action="">
+    <form class="textoCentro" onsubmit="console.log(`Enviado!`)">
       <h4>Entre em contato!</h4>
-      <input type="text" size="40" placeholder="Nome:" />
+      <input id="nome" type="text" size="40" placeholder="Nome:" required/>
       <br />
-      <input type="email" size="40" placeholder="E-mail:" />
+      <input id="email" type="email" size="40" placeholder="E-mail:" />
       <br />
       <textarea
         name=""
@@ -31,11 +31,13 @@
         cols="40"
         rows="10"
         placeholder="Mensagem:"
+        minlength="15"
       ></textarea>
-      <br />
-      <input type="submit" value="Enviar" />
+    </p>
+      <input type="button" onclick="enviar()" value="Enviar" />
     </form>
+    <span id="resposta"></span>
     <h4>Ficaremos felizes em atender!!</h4>
-
   </body>
+  <script src="./js/script.js"></script>
 </html>
