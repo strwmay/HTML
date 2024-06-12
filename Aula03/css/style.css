@@ -5,15 +5,32 @@
   box-sizing: border-box;
 }
 
-/*Variáveis que podem ser usadas para todo o documento*/
+/* modo dark */
 :root {
   --bg-dark: url(../img/Dark.png);
+  --text-color: #d9d9d9;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(../img/moon.svg);
+  --highlight-color: rgba(255, 255, 255, 0.3);
+}
+
+/* modo light */
+.light{
+  --bg-dark: url(../img/Light.png);
+  --text-color: #292929;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(../img/sun.svg);
+  --highlight-color: rgba(0, 0, 0, 0.3);
 }
 
 body {
   background: var(--bg-dark) no-repeat top center / cover;
   height: 100vh;
-  color: #d9d9d9;
+  color: var(--stroke-color);
   text-decoration: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -54,7 +71,7 @@ body {
   height: 30px;
   border-radius: 50%;
   border: 0;
-  background: #d9d9d9 url(../img/moon.svg) no-repeat center;
+  background: var(--text-color) var(--switch-bg-url) no-repeat center;
 
   position: absolute;
   z-index: 1;
@@ -64,17 +81,21 @@ body {
   animation: slide-out 0.5s;
 }
 
+.light #botao button{
+  animation: slide-in 0.5s forwards;
+}
+
 #botao button:hover {
-  outline: 5px solid rgb(255, 255, 255, 0.2);
+  outline: 5px solid var(--surface-color);
   transition: all 0.3s;
 }
 
 #botao span {
-  background: #d9d9d968;
+  background: var(--surface-color);
   display: block;
   width: 55px;
   height: 25px;
-  border: 1.5px solid #d9d9d9;
+  border: 1.5px solid var(--text-color);
   border-radius: 25px;
 
   backdrop-filter: blur(5px);
@@ -94,17 +115,17 @@ body {
   align-items: center;
   justify-content: center;
   padding: 15px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--stroke-color);
   border-radius: 5px;
-  background: rgb(255, 255, 255, 0.1);
+  background: var(--surface-color);
   text-decoration: none;
   font-weight: bold;
-  color: #d9d9d9;
+  color: var(--stroke-color);
 }
 
 #links ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #fff;
+  background: var(--surface-color-hover);
+  border: 1px solid var(--);
 
   transition: all 0.5s;
 }
@@ -119,7 +140,7 @@ body {
 
 #redeSocial a {
   text-decoration: none;
-  color: #d9d9d9;
+  color: var(--stroke-color);
 }
 
 #footer {
@@ -130,7 +151,7 @@ body {
 
 #footer a {
   text-decoration: none;
-  color: #d9d9d9;
+  color: var(--stroke-color);
 }
 
 @keyframes slide-out {
