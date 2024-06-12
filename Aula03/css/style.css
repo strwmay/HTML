@@ -1,16 +1,152 @@
 /*Faz aplicação global do CSS*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*Variáveis que podem ser usadas para todo o documento*/
-:root{
-    --bg-dark: url(../img/Dark.png)
+:root {
+  --bg-dark: url(../img/Dark.png);
 }
 
 body {
-    background: var(--bg-dark) no-repeat top center / cover ;
-    height: 100vh;
-    }
+  background: var(--bg-dark) no-repeat top center / cover;
+  height: 100vh;
+  color: #d9d9d9;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#container {
+  width: 100%;
+  max-width: 590px;
+  margin: 55px auto 0px;
+  padding: 0px 25px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profile img {
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+}
+
+#profile p {
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+#botao {
+  position: relative;
+  width: 65px;
+  margin: 5px auto;
+}
+
+#botao button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0;
+  background: #d9d9d9 url(../img/moon.svg) no-repeat center;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+
+  animation: slide-out 0.5s;
+}
+
+#botao button:hover {
+  outline: 5px solid rgb(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+#botao span {
+  background: #d9d9d968;
+  display: block;
+  width: 55px;
+  height: 25px;
+  border: 1.5px solid #d9d9d9;
+  border-radius: 25px;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+}
+
+#links ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: rgb(255, 255, 255, 0.1);
+  text-decoration: none;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+#links ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+
+  transition: all 0.5s;
+}
+
+#redeSocial {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  gap: 25px;
+  font-size: 25px;
+}
+
+#redeSocial a {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+#footer {
+  text-align: center;
+  font-size: 15px;
+  padding: 24px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
